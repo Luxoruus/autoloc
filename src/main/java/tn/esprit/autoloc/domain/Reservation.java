@@ -29,7 +29,7 @@ public class Reservation {
     private StatutReservation statut;
 
     @ManyToOne
-    private Vehicule vehicle;
+    private Vehicule vehicule;
 
     @ManyToOne
     private Client client;
