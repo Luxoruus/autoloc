@@ -26,4 +26,7 @@ public class Maintenance {
 
     @Column(nullable = false)
     private String description;
+
+    @ManyToOne
+    private Vehicule vehicule;
 }

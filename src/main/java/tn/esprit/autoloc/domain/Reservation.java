@@ -27,4 +27,13 @@ public class Reservation {
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private StatutReservation statut;
+
+    @ManyToOne
+    private Vehicule vehicle;
+
+    @ManyToOne
+    private Client client;
+
+    @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    private Contrat contrat;
 }

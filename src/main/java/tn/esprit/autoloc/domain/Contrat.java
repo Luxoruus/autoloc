@@ -8,6 +8,7 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -27,4 +28,10 @@ public class Contrat {
 
     @Column(nullable = false)
     private boolean valide;
+
+    @OneToOne(mappedBy = "contrat")
+    private Reservation reservation;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "contrat", orphanRemoval = true)
+    private Set<Paiement> Paiements;
 }
