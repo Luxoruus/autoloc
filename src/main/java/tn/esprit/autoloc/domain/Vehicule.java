@@ -41,14 +41,14 @@ public class Vehicule {
     private StatutVehicule statut;
 
     @OneToMany(mappedBy = "vehicule")
-    private Set<Reservation> Reservations;
+    private Set<Reservation> reservations;
 
     @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-    private Set<Equipement> Equipements;
+    private Set<Equipement> equipements;
 
     @ManyToOne
     private Agence agence;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "vehicule", orphanRemoval = true)
-    private Set<Maintenance> Maintenances;
+    private Set<Maintenance> maintenances;
 }

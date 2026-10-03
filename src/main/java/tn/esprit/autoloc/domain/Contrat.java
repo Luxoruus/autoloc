@@ -33,5 +33,5 @@ public class Contrat {
     private Reservation reservation;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "contrat", orphanRemoval = true)
-    private Set<Paiement> Paiements;
+    private Set<Paiement> paiements;
 }

@@ -22,5 +22,5 @@ public class Equipement {
     private String libelle;
 
     @ManyToMany(mappedBy = "equipements")
-    private Set<Vehicule> Vehicules;
+    private Set<Vehicule> vehicules;
 }

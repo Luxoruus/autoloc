@@ -31,8 +31,8 @@ public class Agence {
     private String telephone;
 
     @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE}, mappedBy = "agence")
-    private Set<Employe> Employes;
+    private Set<Employe> employes;
 
     @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE}, mappedBy = "agence")
-    private Set<Vehicule> Vehicules;
+    private Set<Vehicule> vehicules;
 }

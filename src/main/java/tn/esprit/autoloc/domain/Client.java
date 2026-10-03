@@ -38,5 +38,5 @@ public class Client {
     private LocalDate dateInscription;
 
     @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE}, mappedBy = "client")
-    private Set<Reservation> Reservations;
+    private Set<Reservation> reservations;
 }
